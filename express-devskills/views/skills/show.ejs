@@ -1,16 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Skills</title>
-</head>
-
-<body>
-    <h1>Skill #<%= skill.id %></h1>
-    <h3><%= skill.skill %></h3>
+<%- include('../redundancies/header') %>
     <h3>Complete: <%= skill.learned ? 'Yes' : 'No' %></h3>
-</body>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Skill #<%= skill.id %></h5>
+            <p class="card-text"><%= skill.skill %></p>
+            <a href="#" class="btn btn-primary">Complete: <%= skill.learned ? 'Yes' : 'No' %></a>
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
 
-</html>
+        </div>
+    </div>
+<%- include('../redundancies/footer') %>
