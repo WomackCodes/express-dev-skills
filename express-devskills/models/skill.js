@@ -5,9 +5,15 @@ const skills = [
 ];
 
 module.exports = {
-    getAll
+    getAll,
+    getOne,
 };
 
 function getAll() {
     return skills;
 }
+
+function getOne(id) {
+    // Use the array.prototype.fund iterator method
+    return skills.find(skill => skill.id === parseInt(id));
+} 
