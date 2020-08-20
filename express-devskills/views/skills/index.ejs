@@ -1,12 +1,26 @@
-<%- include('../redundancies/header') %>
-    <h1>Developer Skills</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel='stylesheet' href='/stylesheets/style.css' />    <title>Developer Skills</title>
+</head>
+
+<body>
+    <h1>Dev Skills</h1>
     <ul>
         <% skills.forEach(function(s) { %>
         <li>
+            <form action="/skills/<%= s.id %>?_method=DELETE" class="delete-form" method="POST">
+                <button type="submit">X</button>
+            </form>
             <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-            -
             <%= s.learned ? 'learned' : 'not learned' %>
         </li>
         <% }); %>
     </ul>
-<%- include('../redundancies/footer') %>
+    <a href="/skills/new">Add Skill</a>
+</body>
+
+</html>

@@ -1,11 +1,12 @@
-// This file is an example of a router dedicated 
-// to a resource, in this case, users.
-const express = require('express');
+// an example of a router dedicated to a resource
+const express = require("express");
 const router = express.Router();
-const skillsCtrl = require('../controllers/skills');
-
-
+const skillsCtrl = require("../controllers/skills");
 /* GET users listing. */
-router.get('/', skillsCtrl.index);
-router.get('/:id', skillsCtrl.show);
+router.get("/", skillsCtrl.index);
+router.get("/new", skillsCtrl.new);
+router.get("/:id", skillsCtrl.show);
+router.post("/", skillsCtrl.create);
+router.delete('/:id', skillsCtrl.delete);
+
 module.exports = router;
